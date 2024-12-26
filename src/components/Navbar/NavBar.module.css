@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 200;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000b8;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    color: #ffcc00;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+    text-decoration: none; 
+}
+
+.navbar-logo-img {
+    width: 30px;
+    height: 30px; 
+    margin-right: 10px;
+    background-color: transparent;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+    background-color: transparent;
+}
+
+.navbar-menu a {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.navbar-menu a:active,
+.navbar-menu a:focus,
+.navbar-menu a:hover {
+    color: #ffcc00;
+}
+
+/* Estilo para el nombre del usuario */
+.navbar-user {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navbar-user:hover {
+    color: #ffcc00; /* Cambia el color a amarillo cuando el mouse pasa por encima */
+}

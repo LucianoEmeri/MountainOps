@@ -1,0 +1,87 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/background3.jpg');
+    width: 100vw;
+    height: min-content;
+    padding-top: 5vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 10vh;
+    text-align: center;
+    overflow: auto;
+}
+
+.title1 {
+    font-size: 5rem;
+    color: #ffcc00;
+    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-top: 50px;
+}
+
+.title3 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.7);
+    padding-bottom: 2vh;
+}
+
+.turnosContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.noTurnos {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.7);
+    display: flex; /* Establece un contenedor flexible */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    min-height: 65vh; /* Asegura que el contenedor ocupe al menos toda la altura de la vista */
+    text-align: center; /* Centra el texto dentro de su contenedor */
+    margin: 0; /* Elimina márgenes que podrían causar el scroll */
+    overflow: hidden; /* Evita que el contenedor tenga scroll */
+}
+
+.createTurnoButton {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 10px;
+    width: auto;
+    max-width: 300px;
+    display: inline-block;
+    text-align: center;
+}
+
+.createTurnoButton:hover {
+    background-color: #f8b400;
+}
+
+.loginLink {
+    color: #ffcc00; 
+    font-size: 2.5rem;
+}
+
+.loginLink:hover {
+    text-decoration: underline;
+}

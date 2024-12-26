@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../assets/background1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    overflow: hidden;
+}
+
+.form {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+label {
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.form h2 {
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 4rem;
+}
+
+h3 {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.form div {
+    margin-bottom: 0px;
+}
+
+.form label {
+    display: block;
+}
+
+.form input[type='text'],
+.form input[type='password'],
+.form input[type='email'],
+.form input[type='date'] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffcc00;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.form input[type='text']:focus,
+.form input[type='password']:focus,
+.form input[type='email']:focus,
+.form input[type='date']:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0px;
+}
+
+.form button:hover {
+    background-color: #e6b800;
+}
+
+.form button[type='button'] {
+    background-color: transparent;
+    border: none;
+    color: #ffcc00;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.form button[type='button']:hover {
+    color: #fff;
+}
+
+.register:hover {
+    color: #e6b800;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.error {
+    color: #ffcc00;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}

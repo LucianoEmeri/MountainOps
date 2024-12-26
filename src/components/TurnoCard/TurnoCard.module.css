@@ -1,0 +1,63 @@
+.container {
+    width: 330px;
+    height: 400px;
+    background-color: #0000008e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container h4 {
+    margin: 10px 0;
+    font-size: 25px;
+    line-height: 1.4;
+    background: none;
+    text-shadow: 6px 2px 4px rgba(0, 0, 0, 0.7);
+    white-space: nowrap;
+    color: #fff;
+}
+
+.container .active {
+    color: #00ff00;  /* Verde para estado activo */
+}
+
+.container .canceled {
+    color: #ff0000;  /* Rojo para estado cancelado */
+}
+
+.container button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.container .cancelButton {
+    background-color: #ffcc00;
+}
+
+.container .cancelButton:hover {
+    background-color: #f8b400;
+}
+
+.container .disabledButton {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #666; /* Agregar color de texto más gris para el botón deshabilitado */
+}
