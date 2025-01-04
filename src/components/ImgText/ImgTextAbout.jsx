@@ -1,6 +1,6 @@
 import styles from "./ImgTextAbout.module.css";
-import textImg from "../../assets/10.jpg";  // Importa las imágenes
-import textImg2 from "../../assets/9.jpg"; // Importa las imágenes
+import textImg from "../../assets/10.jpg"; 
+import textImg2 from "../../assets/9.jpg"; 
 
 const ImgTextAbout = () => {
     return (
