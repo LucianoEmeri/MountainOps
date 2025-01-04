@@ -12,16 +12,17 @@ body, html {
     align-items: center;
     background-image: url('../../assets/background3.jpg');
     width: 100vw;
-    height: min-content;
+    height: 100vh;
     padding-top: 5vh;
+    padding-bottom: 5vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-bottom: 10vh;
     text-align: center;
-    overflow: auto;
+    overflow: hidden; 
 }
+
 
 .title1 {
     font-size: 5rem;
