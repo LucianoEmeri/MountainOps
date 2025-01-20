@@ -10,7 +10,9 @@
 
 .header {
     margin-top: 5rem;
+    padding-top: 2rem;
     background-color: transparent;
+    font-weight: lighter;
     text-align: center;
     color: #ffcc00;
     text-shadow: 6px 2px 4px rgba(0, 0, 0, 0.7);
@@ -32,8 +34,9 @@
     text-shadow: 6px 2px 4px rgba(0, 0, 0, 0.7);
     font-size: 6rem;
     cursor: pointer;
+    font-weight: lighter;
     transition: transform 0.5s ease, text-shadow 0.5s ease;
-    margin-top: 1rem; 
+    margin-top: 1rem;
     padding: 10px 20px;
 }
 
@@ -41,4 +44,34 @@
     transform: scale(1.05);
     text-shadow: 3px 2px 4px #111, 0 0 5px #ffcc00;
     transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 4rem; 
+        margin-top: 3rem;
+    }
+
+    .unete {
+        font-size: 4rem; 
+        margin-top: 2rem;
+    }
+
+
+    .container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 3rem; 
+        margin-top: 2rem;
+    }
+
+    .unete {
+        font-size: 3.5rem; 
+        margin-top: 1.5rem;
+    }
 }

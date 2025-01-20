@@ -19,16 +19,64 @@
     font-size: 80px;
     background: none;
     text-align: center;
+    font-weight: lighter;
     color: #ffcc00;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     line-height: 1.2;
 }
 
 .title3 {
-    font-size: 50px; 
+    font-size: 50px;
     background: none;
+    font-weight: lighter;
     text-align: center;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     line-height: 1.2;
+}
+
+
+@media (max-width: 1024px) {
+    .title1 {
+        font-size: 60px;
+    }
+
+    .title3 {
+        font-size: 40px;
+    }
+
+    .container {
+        padding-top: 10vh;
+        padding-bottom: 8vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .title1 {
+        font-size: 50px;
+    }
+
+    .title3 {
+        font-size: 35px;
+    }
+
+    .container {
+        padding-top: 8vh;
+        padding-bottom: 6vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .title1 {
+        font-size: 40px;
+        padding-top: 3rem;
+    }
+
+    .title3 {
+        font-size: 30px;
+    }
+
+    .container {
+        padding-bottom: 4vh;
+    }
 }

@@ -29,6 +29,7 @@ body, html {
     color: #ffcc00;
     text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.7);
     margin-top: 50px;
+    font-weight: lighter;
 }
 
 .title3 {
@@ -51,13 +52,13 @@ body, html {
     font-size: 2.5rem;
     color: #fff;
     text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.7);
-    display: flex; /* Establece un contenedor flexible */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    min-height: 65vh; /* Asegura que el contenedor ocupe al menos toda la altura de la vista */
-    text-align: center; /* Centra el texto dentro de su contenedor */
-    margin: 0; /* Elimina márgenes que podrían causar el scroll */
-    overflow: hidden; /* Evita que el contenedor tenga scroll */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 65vh;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
 }
 
 .createTurnoButton {
@@ -85,4 +86,73 @@ body, html {
 
 .loginLink:hover {
     text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding-top: 3rem;
+        padding-bottom: 5vh;
+    }
+
+    .title1 {
+        font-size: 3rem;
+    }
+
+    .title3 {
+        font-size: 2rem;
+    }
+
+    .turnosContainer {
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .noTurnos {
+        font-size: 2rem;
+    }
+
+    .createTurnoButton {
+        font-size: 18px;
+        padding: 8px 16px;
+        width: 100%;
+    }
+
+    .loginLink {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding-top: 3rem;
+        padding-bottom: 5vh;
+    }
+
+    .title1 {
+        font-size: 2.5rem;
+    }
+
+    .title3 {
+        font-size: 1.8rem;
+    }
+
+    .turnosContainer {
+        gap: 8px;
+        padding: 0 5px;
+    }
+
+    .noTurnos {
+        font-size: 1.8rem;
+    }
+
+    .createTurnoButton {
+        font-size: 16px;
+        padding: 6px 12px;
+        width: 100%;
+    }
+
+    .loginLink {
+        font-size: 1.8rem;
+    }
 }

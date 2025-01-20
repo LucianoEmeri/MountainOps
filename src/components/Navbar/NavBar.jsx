@@ -1,49 +1,12 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import styles from './NavBar.module.css';
-import logo from '../../assets/ico.svg';
-import { removeUser } from '../../redux-toolkit/slices/userSlice'; // Importamos la acción de logout
-import Swal from 'sweetalert2'; // Importamos SweetAlert
+import { Link } from 'react-router-dom';
+import styles from './NavBar.module.css'; 
+import logo from '../../assets/ico.svg'; 
 
 const NavBar = () => {
-    const userLogged = useSelector((state) => state.user.userData);
-    const [hover, setHover] = useState(false); // Estado para manejar el hover
-    const dispatch = useDispatch();
-    const navigate = useNavigate();  // Hook para redirigir
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const handleMouseEnter = () => setHover(true);
-    const handleMouseLeave = () => setHover(false);
-
-    const handleLogout = () => {
-        // Mostramos una confirmación antes de proceder con el logout
-        Swal.fire({
-            title: '¿Estás seguro?',
-            text: "Vas a cerrar sesión y salir de tu cuenta.",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'Sí, cerrar sesión',
-            cancelButtonText: 'Cancelar',
-            reverseButtons: true,
-            customClass: {
-                confirmButton: 'swal-confirm-button',
-                cancelButton: 'swal-cancel-button'
-            },
-            buttonsStyling: false
-        }).then((result) => {
-            if (result.isConfirmed) {
-                // Despachamos la acción de logout
-                dispatch(removeUser());
-
-                // Limpiamos el token del localStorage o sessionStorage
-                localStorage.removeItem('authToken');
-                sessionStorage.removeItem('authToken');
-
-                // Redirigimos al usuario a la página de login
-                navigate('/login');
-            }
-        });
-    };
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen); 
 
     return (
         <div className={styles.navbar}>
@@ -53,22 +16,18 @@ const NavBar = () => {
                     <span className={styles["navbar-logo-text"]}>Mountain Ops</span>
                 </div>
             </Link>
-            <div className={styles["navbar-menu"]}>
-                <Link to="/home">Inicio</Link>
-                <Link to="/appointments">Mis Turnos</Link>
-                <Link to="/about">Nosotros</Link>
-                {!userLogged || !userLogged.name ? (
-                    <Link to="/login">Iniciar Sesión</Link>
-                ) : (
-                    <span
-                        className={styles["navbar-user"]}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                        onClick={handleLogout} // Implementa la acción de logout con confirmación
-                    >
-                        {hover ? 'Cerrar sesión' : userLogged.name}
-                    </span>
-                )}
+            {/* Menú de navegación */}
+            <div className={`${styles["navbar-menu"]} ${isMenuOpen ? styles["open"] : ""}`}>
+                <Link to="/home" className={styles["navbar-link"]}>Inicio</Link>
+                <Link to="/appointments" className={styles["navbar-link"]}>Mis Turnos</Link>
+                <Link to="/about" className={styles["navbar-link"]}>Nosotros</Link>
+                <Link to="/login" className={styles["navbar-link"]}>Iniciar Sesión</Link>
+            </div>
+            {/* Menú hamburguesa */}
+            <div className={styles["navbar-hamburger"]} onClick={toggleMenu}>
+                <div className={styles["hamburger-line"]}></div>
+                <div className={styles["hamburger-line"]}></div>
+                <div className={styles["hamburger-line"]}></div>
             </div>
         </div>
     );
